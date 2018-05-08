@@ -100,7 +100,7 @@ public class GlobeSortServer {
                 responseBuilder.addValues(val);
             }
             
-            responseBuilder.setDuration(startTime - endTime);
+            responseBuilder.setDuration(endTime - startTime);
             IntArray response = responseBuilder.build();
             responseObserver.onNext(response);
             responseObserver.onCompleted();
